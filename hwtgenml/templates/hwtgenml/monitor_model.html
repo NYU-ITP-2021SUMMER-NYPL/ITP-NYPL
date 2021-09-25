@@ -1,6 +1,6 @@
 {% extends "hwtgenapp/base.html" %}
 {% load static %}
-{% block title %} ATGen {% endblock %}
+{% block title %} HWTGen {% endblock %}
 {% block script %}
     <script type="text/javascript">
         function processing_alert() {
@@ -37,7 +37,7 @@
                             <td width="125">{{ model.estimated_time }}</td>
                             {% if model.estimated_time == '0' or model.estimated_time == '0.0' %}
                                 <td width="125">
-                                    <div class="status_span">Completed</div>
+                                    <div class="status_span" style="background: gray;" >Completed</div>
                                 </td>
                             {% else %}
                                 <td width="125">
@@ -72,7 +72,7 @@
                             <td width="125">{{ model.estimated_time }}</td>
                             {% if model.estimated_time == '0' or model.estimated_time == '0.0' %}
                                 <td width="125">
-                                    <div class="status_span">Completed</div>
+                                    <div class="status_span" style="background: gray;">Completed</div>
                                 </td>
                             {% else %}
                                 <td width="125">
@@ -107,7 +107,7 @@
                             <td width="125">{{ model.estimated_time }}</td>
                             {% if model.estimated_time == '0.0' or model.estimated_time == '0' %}
                                 <td width="125">
-                                    <div class="status_span">Completed</div>
+                                    <div class="status_span" style="background: gray;">Completed</div>
                                 </td>
                             {% else %}
                                 <td width="125">

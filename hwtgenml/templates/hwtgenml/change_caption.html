@@ -1,6 +1,6 @@
 {% extends "hwtgenapp/base.html" %}
 {% load static %}
-{% block title %} ATGen {% endblock %}
+{% block title %} HWTGen {% endblock %}
 {% block script %}
     <script type="text/javascript">
         function getPage() {
@@ -8,7 +8,7 @@
             if (pageNum >= 1 && pageNum <= {{ Page.paginator.num_pages }}) {
                 location.assign("{% url 'make_exist_caption' %}?page=" + pageNum + "&caption_id={{ caption_id }}&threshold={{ threshold }}")
             } else {
-                alert('请输入正确的页码!')
+                alert('Please input the correct page number')
             }
         }
     </script>
@@ -17,7 +17,7 @@
     <div class="container">
         <div style="margin-top:50px">
             <div class="collection_card">
-                <p>Captions</p>
+                <p>Transcriptions</p>
                 <table class="table">
                     <thead>
                     <tr>
@@ -180,10 +180,10 @@
                         {% endif %}
                     </li>
                     <li>
-                        <a>共{{ Page.paginator.num_pages }}页</a>
+                        <a>total {{ Page.paginator.num_pages }} pages</a>
                     </li>
                     <li>
-                        跳转至<input type="text" id="pageNum" size="1">页
+                        go <input type="text" id="pageNum" size="1">
                         <button type="button" class="btn btn-default btn-sm" onclick="getPage();">
                             <span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span>
                         </button>

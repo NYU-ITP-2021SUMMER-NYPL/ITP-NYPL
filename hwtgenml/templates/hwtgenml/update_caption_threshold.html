@@ -1,6 +1,6 @@
 {% extends "hwtgenapp/base.html" %}
 {% load static %}
-{% block title %} ATGen {% endblock %}
+{% block title %} HWTGen {% endblock %}
 {% block script %}
     <script type="text/javascript">
         function exists_alert() {
@@ -15,9 +15,7 @@
     <div class="container">
         <div class="form_card">
             <p class="title">Choose Confidence Level</p>
-            <p class="subtitle">Text text text text text text text text text text text text text text text text text
-                text
-                text text text text text text text text text ...</p>
+            <p class="subtitle">Please choose the confidence level range of transcritions you would like to view.</p>
             <form id="upload_form" method="POST" action="{% url 'make_exist_caption' %}"
                   enctype="multipart/form-data">
                 {% csrf_token %}

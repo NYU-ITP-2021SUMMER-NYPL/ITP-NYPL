@@ -1,6 +1,6 @@
 {% extends "hwtgenapp/base.html" %}
 {% load static %}
-{% block title %} ATGen {% endblock %}
+{% block title %} HWTGen {% endblock %}
 {% block script %}
     <script type="text/javascript">
         function exists_alert() {
@@ -17,7 +17,7 @@
         <!-- New Collection -->
         <div class="form_card">
             <p class="title">New Collection</p>
-            <p class="subtitle">text text text text </p>
+            <p class="subtitle">text text text </p>
             <form id="upload_form" method="POST" action="{% url 'upload_images' %}"
                   enctype="multipart/form-data">
                 {% csrf_token %}

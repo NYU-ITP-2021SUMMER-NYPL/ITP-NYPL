@@ -1,13 +1,11 @@
 {% extends "hwtgenapp/base.html" %}
 {% load static %}
-{% block title %} ATGen {% endblock %}
+{% block title %} HWTGen {% endblock %}
 {% block content %}
     <div class="container">
         <div class="form_card">
             <p class="title">New Model</p>
-            <p class="subtitle">Text text text text text text text text text text text text text text text text text
-                text
-                text text text text text text text text text ...</p>
+            <p class="subtitle">Select a collection to new a model for.</p>
             <form method="post" action="{% url 'choose_boostrap_model' %}">
                 {% csrf_token %}
                 <div>
